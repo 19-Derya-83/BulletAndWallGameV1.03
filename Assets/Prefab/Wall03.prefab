@@ -119,7 +119,7 @@ MonoBehaviour:
   minX: -10
   maxX: 10
   speed: 25
-  bulletCount2: 10
+  bulletCount2: 0
 --- !u!54 &2961733120208520086
 Rigidbody:
   m_ObjectHideFlags: 0

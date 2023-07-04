@@ -13,11 +13,14 @@ public class OnePlayerController : MonoBehaviour
 
     private bool _isGameFinish;
 
+    private bool _isGameFail;
+
     private void OnEnable()
     {
 
         SevenEventManager.OnGameFinish += GameFinish;
 
+        SevenEventManager.OnGameFail += GameFail;
     }
 
     private void OnDisable()
@@ -25,6 +28,7 @@ public class OnePlayerController : MonoBehaviour
 
         SevenEventManager.OnGameFinish -= GameFinish;
 
+        SevenEventManager.OnGameFail -= GameFail;
 
     }
 
@@ -63,5 +67,14 @@ public class OnePlayerController : MonoBehaviour
         _isGameFinish = true;
 
     }
+
+    private void GameFail()
+
+    {
+
+        _isGameFail = true;
+
+    }
+
 
 }

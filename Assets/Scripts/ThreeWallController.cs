@@ -127,7 +127,14 @@ public class ThreeWallController : MonoBehaviour
 
             }
 
-            
+            //else if (bulletCount2 <= 0)
+            //{
+
+            //    SevenEventManager.InvokeGameFail();
+
+            //    Destroy(gameObject);
+
+            //}
 
         }
 
@@ -139,6 +146,14 @@ public class ThreeWallController : MonoBehaviour
     {
 
         health -= decreaseAmont;
+
+    }
+
+    private void DecreaseBulletCount(int decreaseBulletCount)
+
+    {
+
+        bulletCount2 -= decreaseBulletCount;
 
     }
 
@@ -198,12 +213,6 @@ public class ThreeWallController : MonoBehaviour
 
     }
 
-    private void DecreaseBulletCount(int decreaseBulletCount)
-
-    {
-
-        bulletCount2 -= decreaseBulletCount;
-
-    }
+    
 
 }

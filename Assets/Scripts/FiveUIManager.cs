@@ -20,6 +20,8 @@ public class FiveUIManager : MonoBehaviour
 
     public GameObject gameFailPanel;
 
+    private bool _isFail;
+
     private void Awake()
     {
 
@@ -75,8 +77,18 @@ public class FiveUIManager : MonoBehaviour
     public void IncreaseBulletCount()
 
     {
+        if (_isFail) return;
 
         bulletCount--;
+
+        if (bulletCount <= 0)
+        {
+
+            OpenGameFailPanel();
+
+            _isFail = true;
+
+        }
 
         UpdateBulletCountText();
 
